@@ -1,0 +1,211 @@
+document.addEventListener('DOMContentLoaded', function() {
+// Cart functionality
+let cart = [];
+const cartCount = document.querySelector('.cart-count');
+const cartItems = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
+const cartSidebar = document.getElementById('cartSidebar');
+const closeCart = document.querySelector('.close-cart');
+const cartIcon = document.querySelector('.cart-icon');
+
+// Product data
+const products = [
+{
+id: 1,
+title: 'Silk Blouse',
+price: 89.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Luxurious silk blouse with delicate buttons and a tailored fit.'
+},
+{
+id: 2,
+title: 'Tailored Pants',
+price: 129.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Perfectly tailored pants with a high waist and straight leg.'
+},
+{
+id: 3,
+title: 'Cashmere Sweater',
+price: 149.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Ultra-soft cashmere sweater with a relaxed fit.'
+},
+{
+id: 4,
+title: 'Leather Jacket',
+price: 299.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Premium quality leather jacket with a modern silhouette.'
+}
+];
+
+// Modal elements
+const modal = document.getElementById('quickViewModal');
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalPrice = document.getElementById('modalPrice');
+const modalDescription = document.getElementById('modalDescription');
+const modalAddToCart = document.getElementById('modalAddToCart');
+const closeModal = document.querySelector('.close-modal');
+const sizeSelect = document.getElementById('sizeSelect');
+const quantityInput = document.getElementById('quantityInput');
+
+let currentProduct = null;
+
+// Add to cart buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+button.addEventListener('click', function() {
+const productId = parseInt(this.getAttribute('data-id'));
+const product = products.find(p => p.id === productId);
+addToCart(product);
+});
+});
+
+// Quick view buttons
+document.querySelectorAll('.quick-view').forEach(button => {
+button.addEventListener('click', function() {
+const productId = parseInt(this.getAttribute('data-id'));
+currentProduct = products.find(p => p.id === productId);
+openModal(currentProduct);
+});
+});
+
+// Modal add to cart
+modalAddToCart.addEventListener('click', function() {
+if (currentProduct) {
+const quantity = parseInt(quantityInput.value);
+const size = sizeSelect.value;
+addToCart(currentProduct, quantity, size);
+closeModal.click();
+}
+});
+
+// Open modal function
+function openModal(product) {
+modalImage.src = product.image;
+modalImage.alt = product.title;
+modalTitle.textContent = product.title;
+modalPrice.textContent = `$${product.price.toFixed(2)}`;
+modalDescription.textContent = product.description;
+sizeSelect.value = 'M';
+quantityInput.value = 1;
+modal.style.display = 'block';
+}
+
+// Close modal
+closeModal.addEventListener('click', function() {
+modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+if (event.target === modal) {
+modal.style.display = 'none';
+}
+if (event.target === cartSidebar) {
+cartSidebar.classList.remove('open');
+}
+});
+
+// Cart sidebar toggle
+cartIcon.addEventListener('click', function(e) {
+e.preventDefault();
+cartSidebar.classList.toggle('open');
+});
+
+closeCart.addEventListener('click', function() {
+cartSidebar.classList.remove('open');
+});
+
+// Add to cart function
+function addToCart(product, quantity = 1, size = 'M') {
+const existingItem = cart.find(item => item.id === product.id && item.size === size);
+
+if (existingItem) {
+existingItem.quantity += quantity;
+} else {
+cart.push({
+id: product.id,
+title: product.title,
+price: product.price,
+image: product.image,
+size: size,
+quantity: quantity
+});
+}
+
+updateCart();
+cartSidebar.classList.add('open');
+}
+
+// Update cart function
+function updateCart() {
+cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+
+if (cart.length === 0) {
+cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+cartTotal.textContent = '$0.00';
+return;
+}
+
+cartItems.innerHTML = '';
+let total = 0;
+
+cart.forEach(item => {
+const itemTotal = item.price * item.quantity;
+total += itemTotal;
+
+const cartItemElement = document.createElement('div');
+cartItemElement.className = 'cart-item';
+cartItemElement.innerHTML = `
+<div class="cart-item-image">
+<img src="${item.image}" alt="${item.title}">
+</div>
+<div class="cart-item-details">
+<h4 class="cart-item-title">${item.title}</h4>
+<p class="cart-item-price">$${item.price.toFixed(2)}</p>
+<p class="cart-item-quantity">Size: ${item.size} | Qty: ${item.quantity}</p>
+<p class="remove-item" data-id="${item.id}" data-size="${item.size}">Remove</p>
+</div>
+`;
+
+cartItems.appendChild(cartItemElement);
+});
+
+// Add event listeners to remove buttons
+document.querySelectorAll('.remove-item').forEach(button => {
+button.addEventListener('click', function() {
+const itemId = parseInt(this.getAttribute('data-id'));
+const itemSize = this.getAttribute('data-size');
+removeFromCart(itemId, itemSize);
+});
+});
+
+cartTotal.textContent = `$${total.toFixed(2)}`;
+}
+
+// Remove from cart function
+function removeFromCart(id, size) {
+cart = cart.filter(item => !(item.id === id && item.size === size));
+updateCart();
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
