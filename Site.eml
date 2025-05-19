@@ -1,0 +1,524 @@
+MIME-Version: 1.0
+Date: Mon, 19 May 2025 16:55:00 -0400
+Message-ID: <CALj3H63AzSvZsf1Nd8XsBYe-fuPAHceCmzt-zLCYy+Psc8cp0Q@mail.gmail.com>
+Subject: Site
+From: BookieBarack <e.book3275@gmail.com>
+To: BookieBarack <e.book3275@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000006b9c030635835882"
+
+--0000000000006b9c030635835882
+Content-Type: text/plain; charset="UTF-8"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elegance | Premium Fashion Brand</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
+">
+</head>
+<body>
+<!-- Header/Navbar -->
+<header>
+<div class="container">
+<div class="logo">
+<h1>ELEGANCE</h1>
+</div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#collections">Collections</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="icons">
+<a href="#search"><i class="fas fa-search"></i></a>
+<a href="#account"><i class="fas fa-user"></i></a>
+<a href="#cart" class="cart-icon"><i class="fas fa-shopping-bag"></i><span
+class="cart-count">0</span></a>
+</div>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h2>Spring Collection 2023</h2>
+<p>Discover the latest trends in fashion</p>
+<a href="#shop" class="btn">Shop Now</a>
+</div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products" id="shop">
+<div class="container">
+<h2>Featured Products</h2>
+<div class="product-grid">
+<!-- Product 1 -->
+<div class="product-card">
+<div class="product-image">
+<img src="https://via.placeholder.com/300x400" alt="Silk Blouse">
+<div class="product-overlay">
+<button class="quick-view" data-id="1">Quick View</button>
+</div>
+</div>
+<div class="product-details">
+<h3>Silk Blouse</h3>
+<p class="price">$89.99</p>
+<button class="add-to-cart" data-id="1">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card">
+<div class="product-image">
+<img src="https://via.placeholder.com/300x400" alt="Tailored Pants">
+<div class="product-overlay">
+<button class="quick-view" data-id="2">Quick View</button>
+</div>
+</div>
+<div class="product-details">
+<h3>Tailored Pants</h3>
+<p class="price">$129.99</p>
+<button class="add-to-cart" data-id="2">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card">
+<div class="product-image">
+<img src="https://via.placeholder.com/300x400" alt="Cashmere Sweater">
+<div class="product-overlay">
+<button class="quick-view" data-id="3">Quick View</button>
+</div>
+</div>
+<div class="product-details">
+<h3>Cashmere Sweater</h3>
+<p class="price">$149.99</p>
+<button class="add-to-cart" data-id="3">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card">
+<div class="product-image">
+<img src="https://via.placeholder.com/300x400" alt="Leather Jacket">
+<div class="product-overlay">
+<button class="quick-view" data-id="4">Quick View</button>
+</div>
+</div>
+<div class="product-details">
+<h3>Leather Jacket</h3>
+<p class="price">$299.99</p>
+<button class="add-to-cart" data-id="4">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Collections -->
+<section class="collections" id="collections">
+<div class="container">
+<h2>Our Collections</h2>
+<div class="collection-grid">
+<div class="collection-item">
+<img src="https://via.placeholder.com/600x400" alt="Spring Collection">
+<div class="collection-overlay">
+<h3>Spring</h3>
+<a href="#" class="btn">View Collection</a>
+</div>
+</div>
+<div class="collection-item">
+<img src="https://via.placeholder.com/600x400" alt="Summer Collection">
+<div class="collection-overlay">
+<h3>Summer</h3>
+<a href="#" class="btn">View Collection</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+<div class="container">
+<div class="about-content">
+<h2>About Elegance</h2>
+<p>Founded in 2010, Elegance is a premium fashion brand dedicated to
+creating timeless pieces with modern sophistication. Our collections are
+designed for the contemporary individual who values quality, craftsmanship,
+and sustainable fashion.</p>
+<p>Each piece is meticulously crafted using the finest materials and
+ethical production methods.</p>
+<a href="#" class="btn">Learn More</a>
+</div>
+<div class="about-image">
+<img src="https://via.placeholder.com/500x600" alt="About Elegance">
+</div>
+</div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+<div class="container">
+<h2>Subscribe to Our Newsletter</h2>
+<p>Get 10% off your first order and be the first to know about new arrivals
+and exclusive offers.</p>
+<form>
+<input type="email" placeholder="Your email address" required>
+<button type="submit" class="btn">Subscribe</button>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-column">
+<h3>ELEGANCE</h3>
+<p>Premium fashion for the modern individual. Timeless designs with
+contemporary flair.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-pinterest"></i></a>
+</div>
+</div>
+<div class="footer-column">
+<h3>Shop</h3>
+<ul>
+<li><a href="#">Women</a></li>
+<li><a href="#">Men</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Help</h3>
+<ul>
+<li><a href="#">Customer Service</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="#">Returns & Exchanges</a></li>
+<li><a href="#">Shipping Information</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Contact</h3>
+<ul>
+<li><i class="fas fa-map-marker-alt"></i> 123 Fashion Ave, New York</li>
+<li><i class="fas fa-phone"></i> (123) 456-7890</li>
+<li><i class="fas fa-envelope"></i> info@elegance.com</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2023 Elegance. All rights reserved.</p>
+<div class="payment-methods">
+<i class="fab fa-cc-visa"></i>
+<i class="fab fa-cc-mastercard"></i>
+<i class="fab fa-cc-amex"></i>
+<i class="fab fa-cc-paypal"></i>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Quick View Modal -->
+<div class="modal" id="quickViewModal">
+<div class="modal-content">
+<span class="close-modal">&times;</span>
+<div class="modal-product">
+<div class="modal-product-image">
+<img src="https://via.placeholder.com/500x600" alt="Product Image"
+id="modalImage">
+</div>
+<div class="modal-product-details">
+<h2 id="modalTitle">Product Title</h2>
+<p class="price" id="modalPrice">$0.00</p>
+<p id="modalDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
+elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="size-selector">
+<label>Size:</label>
+<select id="sizeSelect">
+<option value="XS">XS</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="quantity-selector">
+<label>Quantity:</label>
+<input type="number" id="quantityInput" min="1" value="1">
+</div>
+<button class="btn add-to-cart" id="modalAddToCart">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Shopping Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+<div class="cart-header">
+<h3>Your Cart</h3>
+<span class="close-cart">&times;</span>
+</div>
+<div class="cart-items" id="cartItems">
+<!-- Cart items will be added here dynamically -->
+<p class="empty-cart">Your cart is empty</p>
+</div>
+<div class="cart-total">
+<p>Total: <span id="cartTotal">$0.00</span></p>
+<a href="#" class="btn checkout-btn">Checkout</a>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+--0000000000006b9c030635835882
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div>&lt;!DOCTYPE html&gt;<br>&lt;html lang=3D&quot;en&quot;&gt;<br>&lt;hea=
+d&gt;<br>    &lt;meta charset=3D&quot;UTF-8&quot;&gt;<br>    &lt;meta name=
+=3D&quot;viewport&quot; content=3D&quot;width=3Ddevice-width, initial-scale=
+=3D1.0&quot;&gt;<br>    &lt;title&gt;Elegance | Premium Fashion Brand&lt;/t=
+itle&gt;<br>    &lt;link rel=3D&quot;stylesheet&quot; href=3D&quot;styles.c=
+ss&quot;&gt;<br>    &lt;link rel=3D&quot;stylesheet&quot; href=3D&quot;<a h=
+ref=3D"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/=
+all.min.css">https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta=
+3/css/all.min.css</a>&quot;&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt=
+;!-- Header/Navbar --&gt;<br>    &lt;header&gt;<br>        &lt;div class=3D=
+&quot;container&quot;&gt;<br>            &lt;div class=3D&quot;logo&quot;&g=
+t;<br>                &lt;h1&gt;ELEGANCE&lt;/h1&gt;<br>            &lt;/div=
+&gt;<br>            &lt;nav&gt;<br>                &lt;ul&gt;<br>          =
+          &lt;li&gt;&lt;a href=3D&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li=
+&gt;<br>                    &lt;li&gt;&lt;a href=3D&quot;#shop&quot;&gt;Sho=
+p&lt;/a&gt;&lt;/li&gt;<br>                    &lt;li&gt;&lt;a href=3D&quot;=
+#collections&quot;&gt;Collections&lt;/a&gt;&lt;/li&gt;<br>                 =
+   &lt;li&gt;&lt;a href=3D&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;<=
+br>                    &lt;li&gt;&lt;a href=3D&quot;#contact&quot;&gt;Conta=
+ct&lt;/a&gt;&lt;/li&gt;<br>                &lt;/ul&gt;<br>            &lt;/=
+nav&gt;<br>            &lt;div class=3D&quot;icons&quot;&gt;<br>           =
+     &lt;a href=3D&quot;#search&quot;&gt;&lt;i class=3D&quot;fas fa-search&=
+quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>                &lt;a href=3D&quot;#accoun=
+t&quot;&gt;&lt;i class=3D&quot;fas fa-user&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br=
+>                &lt;a href=3D&quot;#cart&quot; class=3D&quot;cart-icon&quo=
+t;&gt;&lt;i class=3D&quot;fas fa-shopping-bag&quot;&gt;&lt;/i&gt;&lt;span c=
+lass=3D&quot;cart-count&quot;&gt;0&lt;/span&gt;&lt;/a&gt;<br>            &l=
+t;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/header&gt;<br><br>    &lt;!-=
+- Hero Section --&gt;<br>    &lt;section class=3D&quot;hero&quot; id=3D&quo=
+t;home&quot;&gt;<br>        &lt;div class=3D&quot;hero-content&quot;&gt;<br=
+>            &lt;h2&gt;Spring Collection 2023&lt;/h2&gt;<br>            &lt=
+;p&gt;Discover the latest trends in fashion&lt;/p&gt;<br>            &lt;a =
+href=3D&quot;#shop&quot; class=3D&quot;btn&quot;&gt;Shop Now&lt;/a&gt;<br> =
+       &lt;/div&gt;<br>    &lt;/section&gt;<br><br>    &lt;!-- Featured Pro=
+ducts --&gt;<br>    &lt;section class=3D&quot;featured-products&quot; id=3D=
+&quot;shop&quot;&gt;<br>        &lt;div class=3D&quot;container&quot;&gt;<b=
+r>            &lt;h2&gt;Featured Products&lt;/h2&gt;<br>            &lt;div=
+ class=3D&quot;product-grid&quot;&gt;<br>                &lt;!-- Product 1 =
+--&gt;<br>                &lt;div class=3D&quot;product-card&quot;&gt;<br> =
+                   &lt;div class=3D&quot;product-image&quot;&gt;<br>       =
+                 &lt;img src=3D&quot;<a href=3D"https://via.placeholder.com=
+/300x400">https://via.placeholder.com/300x400</a>&quot; alt=3D&quot;Silk Bl=
+ouse&quot;&gt;<br>                        &lt;div class=3D&quot;product-ove=
+rlay&quot;&gt;<br>                            &lt;button class=3D&quot;quic=
+k-view&quot; data-id=3D&quot;1&quot;&gt;Quick View&lt;/button&gt;<br>      =
+                  &lt;/div&gt;<br>                    &lt;/div&gt;<br>     =
+               &lt;div class=3D&quot;product-details&quot;&gt;<br>         =
+               &lt;h3&gt;Silk Blouse&lt;/h3&gt;<br>                        =
+&lt;p class=3D&quot;price&quot;&gt;$89.99&lt;/p&gt;<br>                    =
+    &lt;button class=3D&quot;add-to-cart&quot; data-id=3D&quot;1&quot;&gt;A=
+dd to Cart&lt;/button&gt;<br>                    &lt;/div&gt;<br>          =
+      &lt;/div&gt;<br>                <br>                &lt;!-- Product 2=
+ --&gt;<br>                &lt;div class=3D&quot;product-card&quot;&gt;<br>=
+                    &lt;div class=3D&quot;product-image&quot;&gt;<br>      =
+                  &lt;img src=3D&quot;<a href=3D"https://via.placeholder.co=
+m/300x400">https://via.placeholder.com/300x400</a>&quot; alt=3D&quot;Tailor=
+ed Pants&quot;&gt;<br>                        &lt;div class=3D&quot;product=
+-overlay&quot;&gt;<br>                            &lt;button class=3D&quot;=
+quick-view&quot; data-id=3D&quot;2&quot;&gt;Quick View&lt;/button&gt;<br>  =
+                      &lt;/div&gt;<br>                    &lt;/div&gt;<br> =
+                   &lt;div class=3D&quot;product-details&quot;&gt;<br>     =
+                   &lt;h3&gt;Tailored Pants&lt;/h3&gt;<br>                 =
+       &lt;p class=3D&quot;price&quot;&gt;$129.99&lt;/p&gt;<br>            =
+            &lt;button class=3D&quot;add-to-cart&quot; data-id=3D&quot;2&qu=
+ot;&gt;Add to Cart&lt;/button&gt;<br>                    &lt;/div&gt;<br>  =
+              &lt;/div&gt;<br>                <br>                &lt;!-- P=
+roduct 3 --&gt;<br>                &lt;div class=3D&quot;product-card&quot;=
+&gt;<br>                    &lt;div class=3D&quot;product-image&quot;&gt;<b=
+r>                        &lt;img src=3D&quot;<a href=3D"https://via.placeh=
+older.com/300x400">https://via.placeholder.com/300x400</a>&quot; alt=3D&quo=
+t;Cashmere Sweater&quot;&gt;<br>                        &lt;div class=3D&qu=
+ot;product-overlay&quot;&gt;<br>                            &lt;button clas=
+s=3D&quot;quick-view&quot; data-id=3D&quot;3&quot;&gt;Quick View&lt;/button=
+&gt;<br>                        &lt;/div&gt;<br>                    &lt;/di=
+v&gt;<br>                    &lt;div class=3D&quot;product-details&quot;&gt=
+;<br>                        &lt;h3&gt;Cashmere Sweater&lt;/h3&gt;<br>     =
+                   &lt;p class=3D&quot;price&quot;&gt;$149.99&lt;/p&gt;<br>=
+                        &lt;button class=3D&quot;add-to-cart&quot; data-id=
+=3D&quot;3&quot;&gt;Add to Cart&lt;/button&gt;<br>                    &lt;/=
+div&gt;<br>                &lt;/div&gt;<br>                <br>            =
+    &lt;!-- Product 4 --&gt;<br>                &lt;div class=3D&quot;produ=
+ct-card&quot;&gt;<br>                    &lt;div class=3D&quot;product-imag=
+e&quot;&gt;<br>                        &lt;img src=3D&quot;<a href=3D"https=
+://via.placeholder.com/300x400">https://via.placeholder.com/300x400</a>&quo=
+t; alt=3D&quot;Leather Jacket&quot;&gt;<br>                        &lt;div =
+class=3D&quot;product-overlay&quot;&gt;<br>                            &lt;=
+button class=3D&quot;quick-view&quot; data-id=3D&quot;4&quot;&gt;Quick View=
+&lt;/button&gt;<br>                        &lt;/div&gt;<br>                =
+    &lt;/div&gt;<br>                    &lt;div class=3D&quot;product-detai=
+ls&quot;&gt;<br>                        &lt;h3&gt;Leather Jacket&lt;/h3&gt;=
+<br>                        &lt;p class=3D&quot;price&quot;&gt;$299.99&lt;/=
+p&gt;<br>                        &lt;button class=3D&quot;add-to-cart&quot;=
+ data-id=3D&quot;4&quot;&gt;Add to Cart&lt;/button&gt;<br>                 =
+   &lt;/div&gt;<br>                &lt;/div&gt;<br>            &lt;/div&gt;=
+<br>        &lt;/div&gt;<br>    &lt;/section&gt;<br><br>    &lt;!-- Collect=
+ions --&gt;<br>    &lt;section class=3D&quot;collections&quot; id=3D&quot;c=
+ollections&quot;&gt;<br>        &lt;div class=3D&quot;container&quot;&gt;<b=
+r>            &lt;h2&gt;Our Collections&lt;/h2&gt;<br>            &lt;div c=
+lass=3D&quot;collection-grid&quot;&gt;<br>                &lt;div class=3D&=
+quot;collection-item&quot;&gt;<br>                    &lt;img src=3D&quot;<=
+a href=3D"https://via.placeholder.com/600x400">https://via.placeholder.com/=
+600x400</a>&quot; alt=3D&quot;Spring Collection&quot;&gt;<br>              =
+      &lt;div class=3D&quot;collection-overlay&quot;&gt;<br>               =
+         &lt;h3&gt;Spring&lt;/h3&gt;<br>                        &lt;a href=
+=3D&quot;#&quot; class=3D&quot;btn&quot;&gt;View Collection&lt;/a&gt;<br>  =
+                  &lt;/div&gt;<br>                &lt;/div&gt;<br>         =
+       &lt;div class=3D&quot;collection-item&quot;&gt;<br>                 =
+   &lt;img src=3D&quot;<a href=3D"https://via.placeholder.com/600x400">http=
+s://via.placeholder.com/600x400</a>&quot; alt=3D&quot;Summer Collection&quo=
+t;&gt;<br>                    &lt;div class=3D&quot;collection-overlay&quot=
+;&gt;<br>                        &lt;h3&gt;Summer&lt;/h3&gt;<br>           =
+             &lt;a href=3D&quot;#&quot; class=3D&quot;btn&quot;&gt;View Col=
+lection&lt;/a&gt;<br>                    &lt;/div&gt;<br>                &l=
+t;/div&gt;<br>            &lt;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/=
+section&gt;<br><br>    &lt;!-- About Section --&gt;<br>    &lt;section clas=
+s=3D&quot;about&quot; id=3D&quot;about&quot;&gt;<br>        &lt;div class=
+=3D&quot;container&quot;&gt;<br>            &lt;div class=3D&quot;about-con=
+tent&quot;&gt;<br>                &lt;h2&gt;About Elegance&lt;/h2&gt;<br>  =
+              &lt;p&gt;Founded in 2010, Elegance is a premium fashion brand=
+ dedicated to creating timeless pieces with modern sophistication. Our coll=
+ections are designed for the contemporary individual who values quality, cr=
+aftsmanship, and sustainable fashion.&lt;/p&gt;<br>                &lt;p&gt=
+;Each piece is meticulously crafted using the finest materials and ethical =
+production methods.&lt;/p&gt;<br>                &lt;a href=3D&quot;#&quot;=
+ class=3D&quot;btn&quot;&gt;Learn More&lt;/a&gt;<br>            &lt;/div&gt=
+;<br>            &lt;div class=3D&quot;about-image&quot;&gt;<br>           =
+     &lt;img src=3D&quot;<a href=3D"https://via.placeholder.com/500x600">ht=
+tps://via.placeholder.com/500x600</a>&quot; alt=3D&quot;About Elegance&quot=
+;&gt;<br>            &lt;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/secti=
+on&gt;<br><br>    &lt;!-- Newsletter --&gt;<br>    &lt;section class=3D&quo=
+t;newsletter&quot;&gt;<br>        &lt;div class=3D&quot;container&quot;&gt;=
+<br>            &lt;h2&gt;Subscribe to Our Newsletter&lt;/h2&gt;<br>       =
+     &lt;p&gt;Get 10% off your first order and be the first to know about n=
+ew arrivals and exclusive offers.&lt;/p&gt;<br>            &lt;form&gt;<br>=
+                &lt;input type=3D&quot;email&quot; placeholder=3D&quot;Your=
+ email address&quot; required&gt;<br>                &lt;button type=3D&quo=
+t;submit&quot; class=3D&quot;btn&quot;&gt;Subscribe&lt;/button&gt;<br>     =
+       &lt;/form&gt;<br>        &lt;/div&gt;<br>    &lt;/section&gt;<br><br=
+>    &lt;!-- Footer --&gt;<br>    &lt;footer id=3D&quot;contact&quot;&gt;<b=
+r>        &lt;div class=3D&quot;container&quot;&gt;<br>            &lt;div =
+class=3D&quot;footer-grid&quot;&gt;<br>                &lt;div class=3D&quo=
+t;footer-column&quot;&gt;<br>                    &lt;h3&gt;ELEGANCE&lt;/h3&=
+gt;<br>                    &lt;p&gt;Premium fashion for the modern individu=
+al. Timeless designs with contemporary flair.&lt;/p&gt;<br>                =
+    &lt;div class=3D&quot;social-icons&quot;&gt;<br>                       =
+ &lt;a href=3D&quot;#&quot;&gt;&lt;i class=3D&quot;fab fa-instagram&quot;&g=
+t;&lt;/i&gt;&lt;/a&gt;<br>                        &lt;a href=3D&quot;#&quot=
+;&gt;&lt;i class=3D&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br=
+>                        &lt;a href=3D&quot;#&quot;&gt;&lt;i class=3D&quot;=
+fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>                        &lt=
+;a href=3D&quot;#&quot;&gt;&lt;i class=3D&quot;fab fa-pinterest&quot;&gt;&l=
+t;/i&gt;&lt;/a&gt;<br>                    &lt;/div&gt;<br>                &=
+lt;/div&gt;<br>                &lt;div class=3D&quot;footer-column&quot;&gt=
+;<br>                    &lt;h3&gt;Shop&lt;/h3&gt;<br>                    &=
+lt;ul&gt;<br>                        &lt;li&gt;&lt;a href=3D&quot;#&quot;&g=
+t;Women&lt;/a&gt;&lt;/li&gt;<br>                        &lt;li&gt;&lt;a hre=
+f=3D&quot;#&quot;&gt;Men&lt;/a&gt;&lt;/li&gt;<br>                        &l=
+t;li&gt;&lt;a href=3D&quot;#&quot;&gt;Accessories&lt;/a&gt;&lt;/li&gt;<br> =
+                       &lt;li&gt;&lt;a href=3D&quot;#&quot;&gt;New Arrivals=
+&lt;/a&gt;&lt;/li&gt;<br>                    &lt;/ul&gt;<br>               =
+ &lt;/div&gt;<br>                &lt;div class=3D&quot;footer-column&quot;&=
+gt;<br>                    &lt;h3&gt;Help&lt;/h3&gt;<br>                   =
+ &lt;ul&gt;<br>                        &lt;li&gt;&lt;a href=3D&quot;#&quot;=
+&gt;Customer Service&lt;/a&gt;&lt;/li&gt;<br>                        &lt;li=
+&gt;&lt;a href=3D&quot;#&quot;&gt;Track Order&lt;/a&gt;&lt;/li&gt;<br>     =
+                   &lt;li&gt;&lt;a href=3D&quot;#&quot;&gt;Returns &amp; Ex=
+changes&lt;/a&gt;&lt;/li&gt;<br>                        &lt;li&gt;&lt;a hre=
+f=3D&quot;#&quot;&gt;Shipping Information&lt;/a&gt;&lt;/li&gt;<br>         =
+           &lt;/ul&gt;<br>                &lt;/div&gt;<br>                &=
+lt;div class=3D&quot;footer-column&quot;&gt;<br>                    &lt;h3&=
+gt;Contact&lt;/h3&gt;<br>                    &lt;ul&gt;<br>                =
+        &lt;li&gt;&lt;i class=3D&quot;fas fa-map-marker-alt&quot;&gt;&lt;/i=
+&gt; 123 Fashion Ave, New York&lt;/li&gt;<br>                        &lt;li=
+&gt;&lt;i class=3D&quot;fas fa-phone&quot;&gt;&lt;/i&gt; (123) 456-7890&lt;=
+/li&gt;<br>                        &lt;li&gt;&lt;i class=3D&quot;fas fa-env=
+elope&quot;&gt;&lt;/i&gt; <a href=3D"mailto:info@elegance.com">info@eleganc=
+e.com</a>&lt;/li&gt;<br>                    &lt;/ul&gt;<br>                =
+&lt;/div&gt;<br>            &lt;/div&gt;<br>            &lt;div class=3D&qu=
+ot;footer-bottom&quot;&gt;<br>                &lt;p&gt;&amp;copy; 2023 Eleg=
+ance. All rights reserved.&lt;/p&gt;<br>                &lt;div class=3D&qu=
+ot;payment-methods&quot;&gt;<br>                    &lt;i class=3D&quot;fab=
+ fa-cc-visa&quot;&gt;&lt;/i&gt;<br>                    &lt;i class=3D&quot;=
+fab fa-cc-mastercard&quot;&gt;&lt;/i&gt;<br>                    &lt;i class=
+=3D&quot;fab fa-cc-amex&quot;&gt;&lt;/i&gt;<br>                    &lt;i cl=
+ass=3D&quot;fab fa-cc-paypal&quot;&gt;&lt;/i&gt;<br>                &lt;/di=
+v&gt;<br>            &lt;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/foote=
+r&gt;<br><br>    &lt;!-- Quick View Modal --&gt;<br>    &lt;div class=3D&qu=
+ot;modal&quot; id=3D&quot;quickViewModal&quot;&gt;<br>        &lt;div class=
+=3D&quot;modal-content&quot;&gt;<br>            &lt;span class=3D&quot;clos=
+e-modal&quot;&gt;&amp;times;&lt;/span&gt;<br>            &lt;div class=3D&q=
+uot;modal-product&quot;&gt;<br>                &lt;div class=3D&quot;modal-=
+product-image&quot;&gt;<br>                    &lt;img src=3D&quot;<a href=
+=3D"https://via.placeholder.com/500x600">https://via.placeholder.com/500x60=
+0</a>&quot; alt=3D&quot;Product Image&quot; id=3D&quot;modalImage&quot;&gt;=
+<br>                &lt;/div&gt;<br>                &lt;div class=3D&quot;m=
+odal-product-details&quot;&gt;<br>                    &lt;h2 id=3D&quot;mod=
+alTitle&quot;&gt;Product Title&lt;/h2&gt;<br>                    &lt;p clas=
+s=3D&quot;price&quot; id=3D&quot;modalPrice&quot;&gt;$0.00&lt;/p&gt;<br>   =
+                 &lt;p id=3D&quot;modalDescription&quot;&gt;Lorem ipsum dol=
+or sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt =
+ut labore et dolore magna aliqua.&lt;/p&gt;<br>                    &lt;div =
+class=3D&quot;size-selector&quot;&gt;<br>                        &lt;label&=
+gt;Size:&lt;/label&gt;<br>                        &lt;select id=3D&quot;siz=
+eSelect&quot;&gt;<br>                            &lt;option value=3D&quot;X=
+S&quot;&gt;XS&lt;/option&gt;<br>                            &lt;option valu=
+e=3D&quot;S&quot;&gt;S&lt;/option&gt;<br>                            &lt;op=
+tion value=3D&quot;M&quot;&gt;M&lt;/option&gt;<br>                         =
+   &lt;option value=3D&quot;L&quot;&gt;L&lt;/option&gt;<br>                =
+            &lt;option value=3D&quot;XL&quot;&gt;XL&lt;/option&gt;<br>     =
+                   &lt;/select&gt;<br>                    &lt;/div&gt;<br> =
+                   &lt;div class=3D&quot;quantity-selector&quot;&gt;<br>   =
+                     &lt;label&gt;Quantity:&lt;/label&gt;<br>              =
+          &lt;input type=3D&quot;number&quot; id=3D&quot;quantityInput&quot=
+; min=3D&quot;1&quot; value=3D&quot;1&quot;&gt;<br>                    &lt;=
+/div&gt;<br>                    &lt;button class=3D&quot;btn add-to-cart&qu=
+ot; id=3D&quot;modalAddToCart&quot;&gt;Add to Cart&lt;/button&gt;<br>      =
+          &lt;/div&gt;<br>            &lt;/div&gt;<br>        &lt;/div&gt;<=
+br>    &lt;/div&gt;<br><br>    &lt;!-- Shopping Cart Sidebar --&gt;<br>    =
+&lt;div class=3D&quot;cart-sidebar&quot; id=3D&quot;cartSidebar&quot;&gt;<b=
+r>        &lt;div class=3D&quot;cart-header&quot;&gt;<br>            &lt;h3=
+&gt;Your Cart&lt;/h3&gt;<br>            &lt;span class=3D&quot;close-cart&q=
+uot;&gt;&amp;times;&lt;/span&gt;<br>        &lt;/div&gt;<br>        &lt;div=
+ class=3D&quot;cart-items&quot; id=3D&quot;cartItems&quot;&gt;<br>         =
+   &lt;!-- Cart items will be added here dynamically --&gt;<br>            =
+&lt;p class=3D&quot;empty-cart&quot;&gt;Your cart is empty&lt;/p&gt;<br>   =
+     &lt;/div&gt;<br>        &lt;div class=3D&quot;cart-total&quot;&gt;<br>=
+            &lt;p&gt;Total: &lt;span id=3D&quot;cartTotal&quot;&gt;$0.00&lt=
+;/span&gt;&lt;/p&gt;<br>            &lt;a href=3D&quot;#&quot; class=3D&quo=
+t;btn checkout-btn&quot;&gt;Checkout&lt;/a&gt;<br>        &lt;/div&gt;<br> =
+   &lt;/div&gt;<br><br>    &lt;script src=3D&quot;script.js&quot;&gt;&lt;/s=
+cript&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+
+--0000000000006b9c030635835882--

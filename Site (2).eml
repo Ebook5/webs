@@ -1,0 +1,362 @@
+MIME-Version: 1.0
+Date: Mon, 19 May 2025 16:57:13 -0400
+Message-ID: <CALj3H61vSN8qSJue+=JnVJVH9NAoaoxPA8DeRoNPFGa_hO4PhA@mail.gmail.com>
+Subject: Site
+From: BookieBarack <e.book3275@gmail.com>
+To: BookieBarack <e.book3275@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000062a3a806358360a2"
+
+--00000000000062a3a806358360a2
+Content-Type: text/plain; charset="UTF-8"
+
+document.addEventListener('DOMContentLoaded', function() {
+// Cart functionality
+let cart = [];
+const cartCount = document.querySelector('.cart-count');
+const cartItems = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
+const cartSidebar = document.getElementById('cartSidebar');
+const closeCart = document.querySelector('.close-cart');
+const cartIcon = document.querySelector('.cart-icon');
+
+// Product data
+const products = [
+{
+id: 1,
+title: 'Silk Blouse',
+price: 89.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Luxurious silk blouse with delicate buttons and a tailored
+fit.'
+},
+{
+id: 2,
+title: 'Tailored Pants',
+price: 129.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Perfectly tailored pants with a high waist and straight leg.'
+},
+{
+id: 3,
+title: 'Cashmere Sweater',
+price: 149.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Ultra-soft cashmere sweater with a relaxed fit.'
+},
+{
+id: 4,
+title: 'Leather Jacket',
+price: 299.99,
+image: 'https://via.placeholder.com/300x400',
+description: 'Premium quality leather jacket with a modern silhouette.'
+}
+];
+
+// Modal elements
+const modal = document.getElementById('quickViewModal');
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalPrice = document.getElementById('modalPrice');
+const modalDescription = document.getElementById('modalDescription');
+const modalAddToCart = document.getElementById('modalAddToCart');
+const closeModal = document.querySelector('.close-modal');
+const sizeSelect = document.getElementById('sizeSelect');
+const quantityInput = document.getElementById('quantityInput');
+
+let currentProduct = null;
+
+// Add to cart buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+button.addEventListener('click', function() {
+const productId = parseInt(this.getAttribute('data-id'));
+const product = products.find(p => p.id === productId);
+addToCart(product);
+});
+});
+
+// Quick view buttons
+document.querySelectorAll('.quick-view').forEach(button => {
+button.addEventListener('click', function() {
+const productId = parseInt(this.getAttribute('data-id'));
+currentProduct = products.find(p => p.id === productId);
+openModal(currentProduct);
+});
+});
+
+// Modal add to cart
+modalAddToCart.addEventListener('click', function() {
+if (currentProduct) {
+const quantity = parseInt(quantityInput.value);
+const size = sizeSelect.value;
+addToCart(currentProduct, quantity, size);
+closeModal.click();
+}
+});
+
+// Open modal function
+function openModal(product) {
+modalImage.src = product.image;
+modalImage.alt = product.title;
+modalTitle.textContent = product.title;
+modalPrice.textContent = `$${product.price.toFixed(2)}`;
+modalDescription.textContent = product.description;
+sizeSelect.value = 'M';
+quantityInput.value = 1;
+modal.style.display = 'block';
+}
+
+// Close modal
+closeModal.addEventListener('click', function() {
+modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+if (event.target === modal) {
+modal.style.display = 'none';
+}
+if (event.target === cartSidebar) {
+cartSidebar.classList.remove('open');
+}
+});
+
+// Cart sidebar toggle
+cartIcon.addEventListener('click', function(e) {
+e.preventDefault();
+cartSidebar.classList.toggle('open');
+});
+
+closeCart.addEventListener('click', function() {
+cartSidebar.classList.remove('open');
+});
+
+// Add to cart function
+function addToCart(product, quantity = 1, size = 'M') {
+const existingItem = cart.find(item => item.id === product.id && item.size
+=== size);
+
+if (existingItem) {
+existingItem.quantity += quantity;
+} else {
+cart.push({
+id: product.id,
+title: product.title,
+price: product.price,
+image: product.image,
+size: size,
+quantity: quantity
+});
+}
+
+updateCart();
+cartSidebar.classList.add('open');
+}
+
+// Update cart function
+function updateCart() {
+cartCount.textContent = cart.reduce((total, item) => total + item.quantity,
+0);
+
+if (cart.length === 0) {
+cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+cartTotal.textContent = '$0.00';
+return;
+}
+
+cartItems.innerHTML = '';
+let total = 0;
+
+cart.forEach(item => {
+const itemTotal = item.price * item.quantity;
+total += itemTotal;
+
+const cartItemElement = document.createElement('div');
+cartItemElement.className = 'cart-item';
+cartItemElement.innerHTML = `
+<div class="cart-item-image">
+<img src="${item.image}" alt="${item.title}">
+</div>
+<div class="cart-item-details">
+<h4 class="cart-item-title">${item.title}</h4>
+<p class="cart-item-price">$${item.price.toFixed(2)}</p>
+<p class="cart-item-quantity">Size: ${item.size} | Qty: ${item.quantity}</p>
+<p class="remove-item" data-id="${item.id}"
+data-size="${item.size}">Remove</p>
+</div>
+`;
+
+cartItems.appendChild(cartItemElement);
+});
+
+// Add event listeners to remove buttons
+document.querySelectorAll('.remove-item').forEach(button => {
+button.addEventListener('click', function() {
+const itemId = parseInt(this.getAttribute('data-id'));
+const itemSize = this.getAttribute('data-size');
+removeFromCart(itemId, itemSize);
+});
+});
+
+cartTotal.textContent = `$${total.toFixed(2)}`;
+}
+
+// Remove from cart function
+function removeFromCart(id, size) {
+cart = cart.filter(item => !(item.id === id && item.size === size));
+updateCart();
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+
+--00000000000062a3a806358360a2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div>document.addEventListener(&#39;DOMContentLoaded&#39;, function() {<br>=
+    // Cart functionality<br>    let cart =3D [];<br>    const cartCount =
+=3D document.querySelector(&#39;.cart-count&#39;);<br>    const cartItems =
+=3D document.getElementById(&#39;cartItems&#39;);<br>    const cartTotal =
+=3D document.getElementById(&#39;cartTotal&#39;);<br>    const cartSidebar =
+=3D document.getElementById(&#39;cartSidebar&#39;);<br>    const closeCart =
+=3D document.querySelector(&#39;.close-cart&#39;);<br>    const cartIcon =
+=3D document.querySelector(&#39;.cart-icon&#39;);<br>    <br>    // Product=
+ data<br>    const products =3D [<br>        {<br>            id: 1,<br>   =
+         title: &#39;Silk Blouse&#39;,<br>            price: 89.99,<br>    =
+        image: &#39;<a href=3D"https://via.placeholder.com/300x400">https:/=
+/via.placeholder.com/300x400</a>&#39;,<br>            description: &#39;Lux=
+urious silk blouse with delicate buttons and a tailored fit.&#39;<br>      =
+  },<br>        {<br>            id: 2,<br>            title: &#39;Tailored=
+ Pants&#39;,<br>            price: 129.99,<br>            image: &#39;<a hr=
+ef=3D"https://via.placeholder.com/300x400">https://via.placeholder.com/300x=
+400</a>&#39;,<br>            description: &#39;Perfectly tailored pants wit=
+h a high waist and straight leg.&#39;<br>        },<br>        {<br>       =
+     id: 3,<br>            title: &#39;Cashmere Sweater&#39;,<br>          =
+  price: 149.99,<br>            image: &#39;<a href=3D"https://via.placehol=
+der.com/300x400">https://via.placeholder.com/300x400</a>&#39;,<br>         =
+   description: &#39;Ultra-soft cashmere sweater with a relaxed fit.&#39;<b=
+r>        },<br>        {<br>            id: 4,<br>            title: &#39;=
+Leather Jacket&#39;,<br>            price: 299.99,<br>            image: &#=
+39;<a href=3D"https://via.placeholder.com/300x400">https://via.placeholder.=
+com/300x400</a>&#39;,<br>            description: &#39;Premium quality leat=
+her jacket with a modern silhouette.&#39;<br>        }<br>    ];<br>    <br=
+>    // Modal elements<br>    const modal =3D document.getElementById(&#39;=
+quickViewModal&#39;);<br>    const modalImage =3D document.getElementById(&=
+#39;modalImage&#39;);<br>    const modalTitle =3D document.getElementById(&=
+#39;modalTitle&#39;);<br>    const modalPrice =3D document.getElementById(&=
+#39;modalPrice&#39;);<br>    const modalDescription =3D document.getElement=
+ById(&#39;modalDescription&#39;);<br>    const modalAddToCart =3D document.=
+getElementById(&#39;modalAddToCart&#39;);<br>    const closeModal =3D docum=
+ent.querySelector(&#39;.close-modal&#39;);<br>    const sizeSelect =3D docu=
+ment.getElementById(&#39;sizeSelect&#39;);<br>    const quantityInput =3D d=
+ocument.getElementById(&#39;quantityInput&#39;);<br>    <br>    let current=
+Product =3D null;<br>    <br>    // Add to cart buttons<br>    document.que=
+rySelectorAll(&#39;.add-to-cart&#39;).forEach(button =3D&gt; {<br>        b=
+utton.addEventListener(&#39;click&#39;, function() {<br>            const p=
+roductId =3D parseInt(this.getAttribute(&#39;data-id&#39;));<br>           =
+ const product =3D products.find(p =3D&gt; <a href=3D"http://p.id">p.id</a>=
+ =3D=3D=3D productId);<br>            addToCart(product);<br>        });<br=
+>    });<br>    <br>    // Quick view buttons<br>    document.querySelector=
+All(&#39;.quick-view&#39;).forEach(button =3D&gt; {<br>        button.addEv=
+entListener(&#39;click&#39;, function() {<br>            const productId =
+=3D parseInt(this.getAttribute(&#39;data-id&#39;));<br>            currentP=
+roduct =3D products.find(p =3D&gt; <a href=3D"http://p.id">p.id</a> =3D=3D=
+=3D productId);<br>            openModal(currentProduct);<br>        });<br=
+>    });<br>    <br>    // Modal add to cart<br>    modalAddToCart.addEvent=
+Listener(&#39;click&#39;, function() {<br>        if (currentProduct) {<br>=
+            const quantity =3D parseInt(quantityInput.value);<br>          =
+  const size =3D sizeSelect.value;<br>            addToCart(currentProduct,=
+ quantity, size);<br>            closeModal.click();<br>        }<br>    })=
+;<br>    <br>    // Open modal function<br>    function openModal(product) =
+{<br>        modalImage.src =3D product.image;<br>        modalImage.alt =
+=3D product.title;<br>        modalTitle.textContent =3D product.title;<br>=
+        modalPrice.textContent =3D `$${product.price.toFixed(2)}`;<br>     =
+   modalDescription.textContent =3D product.description;<br>        sizeSel=
+ect.value =3D &#39;M&#39;;<br>        quantityInput.value =3D 1;<br>       =
+ modal.style.display =3D &#39;block&#39;;<br>    }<br>    <br>    // Close =
+modal<br>    closeModal.addEventListener(&#39;click&#39;, function() {<br> =
+       modal.style.display =3D &#39;none&#39;;<br>    });<br>    <br>    //=
+ Close modal when clicking outside<br>    window.addEventListener(&#39;clic=
+k&#39;, function(event) {<br>        if (event.target =3D=3D=3D modal) {<br=
+>            modal.style.display =3D &#39;none&#39;;<br>        }<br>      =
+  if (event.target =3D=3D=3D cartSidebar) {<br>            cartSidebar.clas=
+sList.remove(&#39;open&#39;);<br>        }<br>    });<br>    <br>    // Car=
+t sidebar toggle<br>    cartIcon.addEventListener(&#39;click&#39;, function=
+(e) {<br>        e.preventDefault();<br>        cartSidebar.classList.toggl=
+e(&#39;open&#39;);<br>    });<br>    <br>    closeCart.addEventListener(&#3=
+9;click&#39;, function() {<br>        cartSidebar.classList.remove(&#39;ope=
+n&#39;);<br>    });<br>    <br>    // Add to cart function<br>    function =
+addToCart(product, quantity =3D 1, size =3D &#39;M&#39;) {<br>        const=
+ existingItem =3D cart.find(item =3D&gt; <a href=3D"http://item.id">item.id=
+</a> =3D=3D=3D <a href=3D"http://product.id">product.id</a> &amp;&amp; item=
+.size =3D=3D=3D size);<br>        <br>        if (existingItem) {<br>      =
+      existingItem.quantity +=3D quantity;<br>        } else {<br>         =
+   cart.push({<br>                id: <a href=3D"http://product.id">product=
+.id</a>,<br>                title: product.title,<br>                price:=
+ product.price,<br>                image: product.image,<br>               =
+ size: size,<br>                quantity: quantity<br>            });<br>  =
+      }<br>        <br>        updateCart();<br>        cartSidebar.classLi=
+st.add(&#39;open&#39;);<br>    }<br>    <br>    // Update cart function<br>=
+    function updateCart() {<br>        cartCount.textContent =3D cart.reduc=
+e((total, item) =3D&gt; total + item.quantity, 0);<br>        <br>        i=
+f (cart.length =3D=3D=3D 0) {<br>            cartItems.innerHTML =3D &#39;&=
+lt;p class=3D&quot;empty-cart&quot;&gt;Your cart is empty&lt;/p&gt;&#39;;<b=
+r>            cartTotal.textContent =3D &#39;$0.00&#39;;<br>            ret=
+urn;<br>        }<br>        <br>        cartItems.innerHTML =3D &#39;&#39;=
+;<br>        let total =3D 0;<br>        <br>        cart.forEach(item =3D&=
+gt; {<br>            const itemTotal =3D item.price * item.quantity;<br>   =
+         total +=3D itemTotal;<br>            <br>            const cartIte=
+mElement =3D document.createElement(&#39;div&#39;);<br>            cartItem=
+Element.className =3D &#39;cart-item&#39;;<br>            cartItemElement.i=
+nnerHTML =3D `<br>                &lt;div class=3D&quot;cart-item-image&quo=
+t;&gt;<br>                    &lt;img src=3D&quot;${item.image}&quot; alt=
+=3D&quot;${item.title}&quot;&gt;<br>                &lt;/div&gt;<br>       =
+         &lt;div class=3D&quot;cart-item-details&quot;&gt;<br>             =
+       &lt;h4 class=3D&quot;cart-item-title&quot;&gt;${item.title}&lt;/h4&g=
+t;<br>                    &lt;p class=3D&quot;cart-item-price&quot;&gt;$${i=
+tem.price.toFixed(2)}&lt;/p&gt;<br>                    &lt;p class=3D&quot;=
+cart-item-quantity&quot;&gt;Size: ${item.size} | Qty: ${item.quantity}&lt;/=
+p&gt;<br>                    &lt;p class=3D&quot;remove-item&quot; data-id=
+=3D&quot;${<a href=3D"http://item.id">item.id</a>}&quot; data-size=3D&quot;=
+${item.size}&quot;&gt;Remove&lt;/p&gt;<br>                &lt;/div&gt;<br> =
+           `;<br>            <br>            cartItems.appendChild(cartItem=
+Element);<br>        });<br>        <br>        // Add event listeners to r=
+emove buttons<br>        document.querySelectorAll(&#39;.remove-item&#39;).=
+forEach(button =3D&gt; {<br>            button.addEventListener(&#39;click&=
+#39;, function() {<br>                const itemId =3D parseInt(this.getAtt=
+ribute(&#39;data-id&#39;));<br>                const itemSize =3D this.getA=
+ttribute(&#39;data-size&#39;);<br>                removeFromCart(itemId, it=
+emSize);<br>            });<br>        });<br>        <br>        cartTotal=
+.textContent =3D `$${total.toFixed(2)}`;<br>    }<br>    <br>    // Remove =
+from cart function<br>    function removeFromCart(id, size) {<br>        ca=
+rt =3D cart.filter(item =3D&gt; !(<a href=3D"http://item.id">item.id</a> =
+=3D=3D=3D id &amp;&amp; item.size =3D=3D=3D size));<br>        updateCart()=
+;<br>    }<br>    <br>    // Smooth scrolling for anchor links<br>    docum=
+ent.querySelectorAll(&#39;a[href^=3D&quot;#&quot;]&#39;).forEach(anchor =3D=
+&gt; {<br>        anchor.addEventListener(&#39;click&#39;, function(e) {<br=
+>            e.preventDefault();<br>            <br>            const targe=
+tId =3D this.getAttribute(&#39;href&#39;);<br>            if (targetId =3D=
+=3D=3D &#39;#&#39;) return;<br>            <br>            const targetElem=
+ent =3D document.querySelector(targetId);<br>            if (targetElement)=
+ {<br>                window.scrollTo({<br>                    top: targetE=
+lement.offsetTop - 80,<br>                    behavior: &#39;smooth&#39;<br=
+>                });<br>            }<br>        });<br>    });<br>});</div=
+>
+
+--00000000000062a3a806358360a2--
